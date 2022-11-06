@@ -48,6 +48,7 @@ public class Usuario implements Serializable {
         this.token = token;
     }
 
+    //asociaciones
     @ManyToMany(cascade = CascadeType.ALL)//asociaciones
     @JoinTable(
             name="roles_usuario",
@@ -55,6 +56,15 @@ public class Usuario implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "cod_rol",referencedColumnName = "cod_rol")
     )
     private List<Rol> rol;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name="administra",
+            joinColumns = @JoinColumn(name="id_usuario",referencedColumnName = "id_usuario"),
+            inverseJoinColumns = @JoinColumn(name="id_clinica",referencedColumnName = "id_clinica")
+    )
+    private List<Clinica> clinicas;
+
 
     //getter and setter
 
@@ -121,6 +131,14 @@ public class Usuario implements Serializable {
 
     public void setRol(List<Rol> rol) {
         this.rol = rol;
+    }
+
+    public List<Clinica> getClinicas() {
+        return clinicas;
+    }
+
+    public void setClinicas(List<Clinica> clinicas) {
+        this.clinicas = clinicas;
     }
 
     //toString

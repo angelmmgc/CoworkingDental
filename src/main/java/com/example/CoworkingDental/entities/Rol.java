@@ -2,9 +2,7 @@ package com.example.CoworkingDental.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+
 
 @Entity
 @Table(name ="roles")
@@ -16,20 +14,18 @@ public class Rol implements Serializable {
      */
     @Id
     @Column(name = "cod_rol")
-    private Integer cod_rol;
+    private Integer id;
     @Column(name = "nombre")
     private String nombre;
     @Column(name = "descripcion")
     private String descripcion;
 
     //constructor
-
-
     public Rol() {
     }
 
-    public Rol(Integer cod_rol, String nombre, String descripcion) {
-        this.cod_rol = cod_rol;
+    public Rol(Integer id, String nombre, String descripcion) {
+        this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
     }
@@ -40,12 +36,13 @@ public class Rol implements Serializable {
 
     //getter y setter
 
-    public Integer getCod_rol() {
-        return cod_rol;
+
+    public Integer getId() {
+        return id;
     }
 
-    public void setCod_rol(Integer cod_rol) {
-        this.cod_rol = cod_rol;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -70,7 +67,7 @@ public class Rol implements Serializable {
     @Override
     public String toString() {
         return "Rol{" +
-                "cod_rol=" + cod_rol +
+                "cod_rol=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 '}';
