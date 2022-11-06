@@ -1,6 +1,6 @@
 package com.example.CoworkingDental;
 
-<<<<<<< HEAD
+
 import com.example.CoworkingDental.entities.Rol;
 import com.example.CoworkingDental.entities.Usuario;
 import com.example.CoworkingDental.repository.RolRepository;
@@ -8,20 +8,15 @@ import com.example.CoworkingDental.repository.UsuarioRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-=======
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
->>>>>>> 87ea4a4e8c940f6349bfbedaada1f95fd17d7c75
+
 
 @SpringBootApplication
 public class CoworkingDentalApplication {
 
 	public static void main(String[] args) {
-<<<<<<< HEAD
+
 
 		ApplicationContext context= SpringApplication.run(CoworkingDentalApplication.class, args);
 
@@ -58,13 +53,6 @@ public class CoworkingDentalApplication {
 
 		//ASOCIACION USUARIO-ROL
 
-
-
-
-
-=======
-		SpringApplication.run(CoworkingDentalApplication.class, args);
->>>>>>> 87ea4a4e8c940f6349bfbedaada1f95fd17d7c75
 	}
 
 }
